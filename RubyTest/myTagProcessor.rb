@@ -1,0 +1,3 @@
+require 'myTags'
+
+class Taggerizer
