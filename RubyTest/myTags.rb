@@ -35,3 +35,14 @@ class myDict
       end
     end
   end
+
+  # Method to remove a key-value pair from the dictionary
+  def removeKeyValuePair(key)
+    if @tagDict.has_key? key
+      @tagDict.delete(key)
+    else
+      next
+    end
+  end
+
+    self.tagDict.pop(key, None)
