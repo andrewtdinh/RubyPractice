@@ -24,3 +24,14 @@ class myDict
       @tagDict[key] = [tag].to_set
     end
   end
+
+  # Method to remove an existing tag from tag dictionary
+  def removeTag(term)
+    @tagDict.each do |key, value|
+      if value.include? term
+        value.delete(term)
+      else
+        next
+      end
+    end
+  end
