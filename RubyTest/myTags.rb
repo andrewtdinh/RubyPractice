@@ -17,9 +17,10 @@ class myDict
   end
 
   # Method to update the instance variable tagDict.  The key determines which set to add the term to.
-  def addTag(key, tag):
+  def addTag(key, tag)
     if @tagDict.has_key? key
       @tagDict[key].add tag
     else
       @tagDict[key] = [tag].to_set
+    end
   end
