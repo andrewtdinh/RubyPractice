@@ -2,6 +2,8 @@ require 'myTags'
 require 'set'
 
 class Taggerizer
+  @tags = myDict.new()
+
   def initialize(inputString)
     @originalStr = inputString
     # The next two instance variables are sets because we want unique values inside
@@ -26,6 +28,10 @@ class Taggerizer
         # And also add the search term into the set of non-tags
         @untaggedTerms.add(term)
       end
-    endc
+    end
+  end
+
+  def getDictKey(term)
+
   end
 end
