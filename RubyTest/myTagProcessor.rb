@@ -35,4 +35,8 @@ class Taggerizer
   def getDictKey(term)
     @tags.findKey(term)
   end
-end
+
+  # This method will return the original string
+  def getOrinalStr
+    @originalStr
+  end
