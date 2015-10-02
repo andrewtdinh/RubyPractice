@@ -40,3 +40,9 @@ class Taggerizer
   def getOrinalStr
     @originalStr
   end
+
+  # This method will return the non-tag terms
+  def getUntaggedStr(self):
+    @untaggedTerms.join(' ')
+  end
+end
