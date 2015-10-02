@@ -31,7 +31,8 @@ class Taggerizer
     end
   end
 
+  # This will be used later to search for and get the key in tag dictionary
   def getDictKey(term)
-
+    @tags.findKey(term)
   end
 end
