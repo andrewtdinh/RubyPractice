@@ -9,4 +9,23 @@ class Taggerizer
     @untaggedTerms = Set.new
     # The next variable is an array because we want the terms to be in the order we add them
     @replacedStr = []
+
+    # Convert everything in the string to lower case and split into list of terms
+    terms = @originalStr.downcase.split
+    terms.each do |term|
+      foundKey = getDictKey(term)
+      # If a tag is found in our tag dictionary:
+      if foundKey
+        # We add the search term into the set of tags
+        @taggedTerms.add(term)
+        # We add the returned key to the list of replaced string
+        @replacedStr.push(foundKey)
+      else
+        # Else we just add the search term to the list of replaced string
+        @replacedStr.push(term)
+        # And also add the search term into the set of non-tags
+        @untaggedTerms.add(term)
+      end
+    endc
   end
+end

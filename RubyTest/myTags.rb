@@ -44,5 +44,4 @@ class myDict
       next
     end
   end
-
-    self.tagDict.pop(key, None)
+end
