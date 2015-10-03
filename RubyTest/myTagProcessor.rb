@@ -42,7 +42,12 @@ class Taggerizer
   end
 
   # This method will return the non-tag terms
-  def getUntaggedStr(self):
+  def getUntaggedStr
     @untaggedTerms.join(' ')
+  end
+
+  # This method will return the tag terms
+  def getTagStr
+    @taggedTerms.join(' ')
   end
 end
