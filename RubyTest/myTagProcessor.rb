@@ -50,4 +50,9 @@ class Taggerizer
   def getTagStr
     @taggedTerms.join(' ')
   end
+
+  # This method will return key-substituted string
+  def getSubStr
+    @replacedStr.join(' ')
+  end
 end
