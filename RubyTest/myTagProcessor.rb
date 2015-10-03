@@ -55,4 +55,10 @@ class Taggerizer
   def getSubStr
     @replacedStr.join(' ')
   end
+
+  # This method will add a tag to a key-value pair and then re-initialize the object
+  def addTagToDict(key, tag)
+    @tags.addTag(key, tag)
+    self.initialize(@originalStr)
+  end
 end
