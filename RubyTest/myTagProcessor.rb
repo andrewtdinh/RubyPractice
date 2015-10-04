@@ -59,6 +59,6 @@ class Taggerizer
   # This method will add a tag to a key-value pair and then re-initialize the object
   def addTagToDict(key, tag)
     @tags.addTag(key, tag)
-    self.initialize(@originalStr)
+    initialize(@originalStr)
   end
 end
