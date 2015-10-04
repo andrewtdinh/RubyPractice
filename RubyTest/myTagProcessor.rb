@@ -67,4 +67,10 @@ class Taggerizer
     @tags.removeTag(tag)
     initialize(@originalStr)
   end
+
+  # This method will remove a key value pair from the dictionary and then re-initialize the object
+  def removeKeyFromDict(key)
+    @tags.removeKeyValuePair(key)
+    initialize(@originalStr)
+  end
 end
